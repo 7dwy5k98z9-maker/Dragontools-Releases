@@ -1,0 +1,11 @@
+*.zip
+*.7z
+*.exe
+*.msi
+*.msix
+*.log
+*.tmp
+
+# Prüfsummendateien dürfen vor dem Upload lokal erzeugt werden,
+# gehören aber zusammen mit dem ZIP in das GitHub Release.
+*.sha256
