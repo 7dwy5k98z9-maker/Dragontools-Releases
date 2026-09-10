@@ -6,6 +6,9 @@
 - Bearbeitete RPU wird auf nullgesetzte Level-5-Ränder geprüft.
 - Finale MKV- und MP4-Ausgaben erhalten eine zusätzliche RPU-Rückprüfung.
 - Fehlerhafte oder nicht sicher prüfbare RPUs führen zum sicheren Abbruch.
+- Jellyfin-Import unterstützt aktuelle `BaseItems`-/`MediaStreamInfos`-Datenbanken.
+- Medienhierarchie, Laufzeit, Container, Auflösung, Codecs, Bitraten, Sprachen sowie DV/HDR10+/HDR/SDR werden übernommen.
+- Nichtmedien, gleichwertige Pfaddubletten und inkonsistente Datenbankkopien werden ausgeschlossen.
 
 ## Installation
 

@@ -7,6 +7,12 @@
 - Die bearbeitete RPU wird vor der Injection auf ausschließlich nullgesetzte Level-5-Ränder geprüft.
 - Bei gecroppten Dolby-Vision-Ausgaben wird die RPU nach dem finalen MKV- oder MP4-Mux erneut aus dem Bitstream extrahiert und bytegenau verglichen.
 - Nicht prüfbare oder abweichende RPUs führen zum sicheren Abbruch, statt eine möglicherweise doppelt gecroppte Dolby-Vision-Datei auszugeben.
+- Jellyfin-Import an aktuelle Datenbanken mit `BaseItems` und `MediaStreamInfos` angepasst.
+- Importiert werden nur Filme, Serien, Staffeln, vorhandene Episoden und echte Videodateien; Personen-, Studio-, Genre-, Playlist-, Sammlungs- und Metadatenobjekte werden ausgeschlossen.
+- Pfade, Serien-/Staffelstruktur, Laufzeit, Container, Auflösung, Video-Codec, Video- und Gesamtbitrate werden übernommen.
+- Audio- und Untertitelsprachen, Codecs, Kanäle, Forced-Kennzeichnung und verfügbare Bitraten werden gespeichert.
+- Dolby Vision über RPU-/Profilfelder sowie HDR10+, HDR und SDR werden zuverlässig erkannt.
+- Gleichwertige Windows-/UNC-Pfade werden dedupliziert; inkonsistente Jellyfin-DB-/WAL-Kopien werden vor dem Ersetzen der DragonTools-Mediathek abgelehnt.
 - Optionale GitHub-Updateprüfung aus V9.8.1 ist weiterhin enthalten.
 
 ## Installation
