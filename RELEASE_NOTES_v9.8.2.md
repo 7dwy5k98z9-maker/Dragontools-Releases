@@ -13,6 +13,13 @@
 - Audio- und Untertitelsprachen, Codecs, Kanäle, Forced-Kennzeichnung und verfügbare Bitraten werden gespeichert.
 - Dolby Vision über RPU-/Profilfelder sowie HDR10+, HDR und SDR werden zuverlässig erkannt.
 - Gleichwertige Windows-/UNC-Pfade werden dedupliziert; inkonsistente Jellyfin-DB-/WAL-Kopien werden vor dem Ersetzen der DragonTools-Mediathek abgelehnt.
+- Timestamp-Reparatur arbeitet fail-closed: Fehler, unplausible Laufzeit, Vertragsverletzungen oder mögliche Streamverluste verhindern Ersetzen, Postprocessing und Verschieben.
+- FFprobe und MediaInfo prüfen die Streamanzahl unabhängig; widersprüchliche Ergebnisse verwerfen den Reparaturkandidaten.
+- Der verlustfreie FFmpeg-`+genpts`-Fallback steht auch zur Verfügung, wenn `setts` fehlt oder der erste Kandidat verworfen wurde.
+- Der bekannte FFmpeg-EINVAL-Code `-22` beziehungsweise `4294967274` wird nur beim `+genpts`-Fallback und erst nach vollständigem Lesetest toleriert.
+- Die DragonTools-Mediathek verwendet Schema 4 und speichert zusätzlich Dateigröße, Video-Profil, Streamdauer, Frameanzahl, Bildrate/-modus, Pixelformat, Bittiefe sowie Farbraum, Transferfunktion und Farbprimärwerte.
+- Unplausibel kleine eingebettete Video-Bitraten können aus Streamgröße und Laufzeit neu berechnet werden.
+- Die Suche unterstützt unbekannte Laufzeiten sowie Dateien unter einer Minute oder über fünf Stunden; CSV-Exporte enthalten die neuen technischen Felder.
 - Optionale GitHub-Updateprüfung aus V9.8.1 ist weiterhin enthalten.
 
 ## Installation
@@ -30,6 +37,7 @@ Das Windows-Paket enthält DragonTools samt Python-Laufzeit, aber keine externen
 - Laufende Aufgaben vor dem Wechsel beenden.
 - Den bisherigen Programmordner nicht direkt überschreiben.
 - Persönliche Einstellungen und Profile vorher sichern.
+- Ein bereits installiertes 9.8.2 erkennt diesen aktualisierten 9.8.2-Build nicht automatisch als neuer, weil die Versionsnummer gleich bleibt.
 - Eine Windows-SmartScreen-Warnung kann bei einer noch nicht digital signierten Anwendung auftreten.
 
 ## Dateien

@@ -9,6 +9,11 @@
 - Jellyfin-Import unterstützt aktuelle `BaseItems`-/`MediaStreamInfos`-Datenbanken.
 - Medienhierarchie, Laufzeit, Container, Auflösung, Codecs, Bitraten, Sprachen sowie DV/HDR10+/HDR/SDR werden übernommen.
 - Nichtmedien, gleichwertige Pfaddubletten und inkonsistente Datenbankkopien werden ausgeschlossen.
+- Timestamp-Reparaturen werden vor dem Ersetzen vollständig gelesen und mit FFprobe sowie MediaInfo auf Streamverluste geprüft.
+- Fehlerhafte oder widersprüchliche Reparaturkandidaten verhindern Ersetzen, Postprocessing und Verschieben.
+- Ein verlustfreier `+genpts`-Fallback ergänzt den FFmpeg-`setts`-Pfad.
+- Mediathek-Schema 4 speichert Dateigröße sowie zusätzliche Profil-, Frame-, Farb- und Streamdaten.
+- Laufzeitfilter finden unbekannte, auffällig kurze und über fünf Stunden lange Dateien.
 
 ## Installation
 
@@ -22,6 +27,7 @@
 - Vorhandene laufende Aufgaben zuerst beenden.
 - Den bisherigen Programmordner nicht direkt überschreiben.
 - Persönliche Einstellungen und Profile vor dem Wechsel sichern.
+- Bei einem Austausch innerhalb derselben Version 9.8.2 erscheint für bereits installierte 9.8.2-Builds kein automatischer Updatehinweis.
 
 ## Dateien
 
