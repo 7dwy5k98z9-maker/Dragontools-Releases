@@ -1,18 +1,17 @@
-# DragonTools 9.8.1
+# DragonTools 9.8.2
 
 ## Änderungen
 
-- Optionale Updateprüfung über GitHub beim Programmstart ergänzt.
-- Manuelle Prüfung über **Hilfe → Nach Updates suchen** ergänzt.
-- Bei einer neuen Version entscheidet der Nutzer selbst, ob die Downloadseite geöffnet wird.
-- Es werden keine Updates automatisch heruntergeladen oder installiert.
-- Anonymisierte öffentliche Projekt- und Release-Fassung vorbereitet.
+- Dolby-Vision-Double-Crop nach einem physischen Video-Crop behoben.
+- Bearbeitete RPU wird auf nullgesetzte Level-5-Ränder geprüft.
+- Finale MKV- und MP4-Ausgaben erhalten eine zusätzliche RPU-Rückprüfung.
+- Fehlerhafte oder nicht sicher prüfbare RPUs führen zum sicheren Abbruch.
 
 ## Installation
 
 1. ZIP herunterladen und Prüfsumme kontrollieren.
 2. In einen neuen Ordner entpacken.
-3. `DragonToolsV9.8.1.exe` starten.
+3. `DragonToolsV9.8.2.exe` starten.
 4. Benötigte externe Programme anhand von `TOOLS_INSTALLIEREN.txt` einrichten.
 
 ## Updatehinweise
@@ -23,5 +22,5 @@
 
 ## Dateien
 
-- `DragonToolsV9.8.1-win64.zip`
-- `DragonToolsV9.8.1-win64.zip.sha256`
+- `DragonToolsV9.8.2-win64.zip`
+- `DragonToolsV9.8.2-win64.zip.sha256`

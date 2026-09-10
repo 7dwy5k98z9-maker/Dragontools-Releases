@@ -4,7 +4,7 @@ Dieses Repository ist die öffentliche Downloadquelle für DragonTools und wird 
 
 Fertige Windows-Pakete werden nicht als normale Git-Dateien gespeichert, sondern unter **Releases** veröffentlicht. DragonTools fragt beim Programmstart ausschließlich die öffentlichen Versionsinformationen des neuesten Releases ab. Ein Download oder eine Installation erfolgt nie automatisch.
 
-Das vorbereitete erste öffentliche Release ist **DragonTools 9.8.1**. Es wird mit dem Tag `v9.8.1`, einem vollständigen Windows-ZIP und der zugehörigen SHA-256-Prüfsumme veröffentlicht.
+Das vorbereitete aktuelle Release ist **DragonTools 9.8.2**. Es wird mit dem Tag `v9.8.2`, einem vollständigen Windows-ZIP und der zugehörigen SHA-256-Prüfsumme veröffentlicht.
 
 ## Für Anwender
 
