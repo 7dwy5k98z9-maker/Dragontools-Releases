@@ -3,17 +3,19 @@
 ## Änderungen
 
 - Dolby-Vision-Double-Crop nach einem physischen Video-Crop behoben.
-- Bearbeitete RPU wird auf nullgesetzte Level-5-Ränder geprüft.
-- Finale MKV- und MP4-Ausgaben erhalten eine zusätzliche RPU-Rückprüfung.
+- Bearbeitete RPUs werden auf nullgesetzte Level-5-Ränder geprüft und nach dem finalen MKV-/MP4-Mux erneut aus dem Bitstream gegengeprüft.
 - Fehlerhafte oder nicht sicher prüfbare RPUs führen zum sicheren Abbruch.
 - Jellyfin-Import unterstützt aktuelle `BaseItems`-/`MediaStreamInfos`-Datenbanken.
-- Medienhierarchie, Laufzeit, Container, Auflösung, Codecs, Bitraten, Sprachen sowie DV/HDR10+/HDR/SDR werden übernommen.
-- Nichtmedien, gleichwertige Pfaddubletten und inkonsistente Datenbankkopien werden ausgeschlossen.
+- Medienhierarchie, Laufzeit, Dateigröße, Container, Auflösung, Codecs, Bitraten, Sprachen sowie DV/HDR10+/HDR/SDR werden übernommen.
+- Mediathek-Schema 6 speichert zusätzliche Profil-, Frame-, Farb-, Stream-, Provider-, NFO-, Trickplay- und Untertitelinformationen.
+- Originaltitel, Provider-IDs, Genres, Tags, Studios, Collections/Filmreihen und schlanke Personenbeziehungen werden importiert.
+- Externe Untertitel werden in der Mediathek geführt; ein lokaler Scan erkennt zusätzlich Sidecars, NFO-Dateien und Trickplay-Ordner im Dateisystem.
+- NFO-Lightscan ergänzt vorhandene Mediatheken um NFO-Bestand und Konsistenzprüfung, ohne dafür einen vollständigen NAS-Medienscan zu erzwingen.
+- Datenbanksuche, Bereichsfilter, Medientypfilter, gespeicherte Abfragen, SQL-Hilfe und CSV-Export wurden erweitert.
 - Timestamp-Reparaturen werden vor dem Ersetzen vollständig gelesen und mit FFprobe sowie MediaInfo auf Streamverluste geprüft.
 - Fehlerhafte oder widersprüchliche Reparaturkandidaten verhindern Ersetzen, Postprocessing und Verschieben.
 - Ein verlustfreier `+genpts`-Fallback ergänzt den FFmpeg-`setts`-Pfad.
-- Mediathek-Schema 4 speichert Dateigröße sowie zusätzliche Profil-, Frame-, Farb- und Streamdaten.
-- Laufzeitfilter finden unbekannte, auffällig kurze und über fünf Stunden lange Dateien.
+- Untertitel-Sidecars können zusätzlich zu internen Untertiteln erstellt werden; textbasierte Formate können optional als SRT-Sidecar ausgegeben werden.
 
 ## Installation
 

@@ -1,0 +1,62 @@
+DragonTools 9.8.2 - externe Programme einrichten
+==================================================
+
+Das oeffentliche Windows-Paket enthaelt DragonTools samt Python-/Qt-Laufzeit,
+aber keine externen Medienprogramme. Lade diese Werkzeuge ausschliesslich von
+den offiziellen Projektseiten herunter und beachte die jeweilige Lizenz.
+
+Empfohlene Werkzeuge
+--------------------
+
+FFmpeg / FFprobe
+- Zweck: Analyse, Konvertierung, Remuxing, Reparaturpfade, Untertitel-Sidecars
+- Quelle: https://ffmpeg.org/download.html
+- In DragonTools eintragen oder in den Windows-PATH legen.
+
+MKVToolNix
+- Zweck: MKV-Muxing, mkvmerge, mkvextract, mkvinfo, mkvpropedit
+- Quelle: https://mkvtoolnix.download/downloads.html
+- Den kompletten Programmordner eintragen, damit alle Befehle verfuegbar sind.
+
+MediaInfo CLI
+- Zweck: detaillierte Medien-, HDR-, Dolby-Vision-, Audio- und Untertitelanalyse
+- Quelle: https://mediaarea.net/en/MediaInfo/Download/Windows
+- Die CLI-Version fuer Windows verwenden.
+
+GPAC / MP4Box
+- Zweck: MP4-Muxing, Dolby-Vision-/HDR10+-MP4-Pfade, MP4-Reparaturpfade
+- Quelle: https://gpac.io/downloads/gpac-nightly-builds/
+
+dovi_tool
+- Zweck: Dolby-Vision-RPU extrahieren, pruefen, bearbeiten und injizieren
+- Quelle: https://github.com/quietvoid/dovi_tool/releases
+
+hdr10plus_tool
+- Zweck: HDR10+-Metadaten extrahieren, pruefen und injizieren
+- Quelle: https://github.com/quietvoid/hdr10plus_tool/releases
+
+MakeMKV
+- Zweck: ISO-, DVD- und Blu-ray-Workflows ueber MakeMKV
+- Quelle: https://www.makemkv.com/download/
+- MakeMKV benoetigt eine gueltige Lizenz oder eine zeitlich begrenzte Testlizenz.
+
+HandBrake
+- Zweck: optionales externes Konvertierungswerkzeug und HandBrake-Profile
+- Quelle: https://handbrake.fr/downloads.php
+
+Rename My TV Series
+- Zweck: optionales externes Serien-Umbenennungswerkzeug
+- Quelle: https://www.tweaking4all.com/home-theatre/rename-my-tv-series-v2/
+
+Einrichtung in DragonTools
+--------------------------
+
+1. DragonTools starten.
+2. Einstellungen -> Werkzeugpfade definieren oeffnen.
+3. Die installierten Programme oder Programmordner eintragen.
+4. Danach Werkzeuge -> System pruefen ausfuehren.
+
+Nicht jede Funktion benoetigt jedes Werkzeug. Fehlende optionale Programme
+begrenzen nur die jeweiligen Sonderfunktionen. Fuer Dolby Vision, HDR10+,
+MP4Box-Remuxing, Mediathek-Scans und erweiterte Reparaturpfade sollten die
+oben genannten Kernwerkzeuge vollstaendig eingerichtet sein.

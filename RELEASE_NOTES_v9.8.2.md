@@ -2,26 +2,23 @@
 
 ## Änderungen
 
-- Fehlerbehebung für den Dolby-Vision-Crop: Bei physisch gecroppten Video-Encodes konnte es vorkommen, dass die RPU doppelt gecroppt wurde.
-- Nach dem FFmpeg-Crop werden die RPU-Level-5-Active-Area-Ränder auf das bereits verkleinerte Zielbild normalisiert.
-- Die bearbeitete RPU wird vor der Injection auf ausschließlich nullgesetzte Level-5-Ränder geprüft.
-- Bei gecroppten Dolby-Vision-Ausgaben wird die RPU nach dem finalen MKV- oder MP4-Mux erneut aus dem Bitstream extrahiert und bytegenau verglichen.
-- Nicht prüfbare oder abweichende RPUs führen zum sicheren Abbruch, statt eine möglicherweise doppelt gecroppte Dolby-Vision-Datei auszugeben.
-- Jellyfin-Datenbankimport für aktuelle Jellyfin-12.0-Datenbanken mit `BaseItems` und `MediaStreamInfos` angepasst.
-- Importiert werden nur Filme, Serien, Staffeln, vorhandene Episoden und echte Videodateien; Personen-, Studio-, Genre-, Playlist-, Sammlungs- und Metadatenobjekte werden ausgeschlossen.
-- Pfade, Serien-/Staffelstruktur, Laufzeit, Dateigröße, Container, Auflösung, Video-Codec, Video- und Gesamtbitrate werden übernommen.
-- Audio- und Untertitelsprachen, Codecs, Kanäle, Forced-Kennzeichnung und verfügbare Bitraten werden gespeichert.
-- Externe Untertitel werden in der DragonTools-Mediathek als externe Sidecars geführt, wenn Jellyfin sie entsprechend ausweist; ein echter Ordnerscan erkennt zusätzlich vorhandene Sidecars, NFO-Dateien und Trickplay-Ordner direkt im Dateisystem.
-- Dolby Vision über RPU-/Profilfelder sowie HDR10+, HDR und SDR werden zuverlässig erkannt.
-- Gleichwertige Windows-/UNC-Pfade werden dedupliziert; inkonsistente Jellyfin-DB-/WAL-Kopien werden vor dem Ersetzen der DragonTools-Mediathek abgelehnt.
-- Timestamp-Reparatur arbeitet fail-closed: Fehler, unplausible Laufzeit, Vertragsverletzungen oder mögliche Streamverluste verhindern Ersetzen, Postprocessing und Verschieben.
-- FFprobe und MediaInfo prüfen die Streamanzahl unabhängig; widersprüchliche Ergebnisse verwerfen den Reparaturkandidaten.
-- Der verlustfreie FFmpeg-`+genpts`-Fallback steht auch zur Verfügung, wenn `setts` fehlt oder der erste Kandidat verworfen wurde.
-- Der bekannte FFmpeg-EINVAL-Code `-22` beziehungsweise `4294967274` wird nur beim `+genpts`-Fallback und erst nach vollständigem Lesetest toleriert.
-- Die DragonTools-Mediathek verwendet Schema 5 und speichert zusätzlich Dateigröße, Video-Profil, Streamdauer, Frameanzahl, Bildrate/-modus, Pixelformat, Bittiefe, Farbraum, Transferfunktion, Farbprimärwerte, Untertitel-Herkunft, NFO-Status und Trickplay-Status.
-- Unplausibel kleine eingebettete Video-Bitraten können aus Streamgröße und Laufzeit neu berechnet werden.
-- Die Suche unterstützt unbekannte Laufzeiten sowie Dateien unter einer Minute oder über fünf Stunden; CSV-Exporte enthalten die neuen technischen Felder.
-- Optionale GitHub-Updateprüfung aus V9.8.1 ist weiterhin enthalten.
+- Dolby-Vision-Crop korrigiert: Bei physisch gecropptem Bildmaterial konnte die Dolby-Vision-RPU unter bestimmten Bedingungen erneut gecroppt werden. DragonTools passt die RPU jetzt auf das bereits verkleinerte Zielbild an und prüft sie nach dem finalen MKV- oder MP4-Mux erneut.
+- Jellyfin-12-Import überarbeitet: Der Mediathek-Import ist an die aktuelle Jellyfin-12-Datenbankstruktur angepasst und arbeitet weiterhin ausschließlich read-only über einen geprüften Snapshot.
+- Mediathek auf Schema 6 erweitert: Neben den bisherigen technischen Daten werden jetzt unter anderem Originaltitel, Provider-IDs von TMDB, TheTVDB und IMDb, Genres, Tags, Studios, Collections beziehungsweise Filmreihen sowie schlanke Personenverknüpfungen gespeichert.
+- Technische Mediadaten erweitert: Dateigröße, Laufzeit, Video-Profil, Streamdauer, Frameanzahl, Bildrate, Pixelformat, Bittiefe sowie relevante Farb- und HDR-Informationen werden umfangreicher erfasst.
+- NFO-Lightscan ergänzt: Bestehende Mediathek-Einträge können gezielt auf zugehörige NFO-Dateien geprüft werden, ohne die komplette NAS erneut mit MediaInfo oder FFprobe zu analysieren. Nicht erreichbare Speicherpfade werden als `unreachable` behandelt und nicht fälschlich als fehlend markiert.
+- NFO-Konsistenzprüfung eingeführt: Titel, Originaltitel, Jahr, Staffel, Folge und Provider-IDs aus vorhandenen NFO-Dateien können mit den Mediathek-Daten verglichen werden. Abweichungen werden separat protokolliert, ohne die eigentlichen Datenbankwerte zu überschreiben.
+- Mediathek-Suche deutlich erweitert: Neue Filter für NFO-Zustände, NFO-Abweichungen, Medientypen, Bereiche und technische Eigenschaften machen die interne Datenbank besser auswertbar.
+- SQL-Funktionen ausgebaut: Eigene SQL-Abfragen und normale Mediathek-Suchen können gespeichert werden. Die integrierte SQL-Hilfe zeigt Tabellen, Spalten, Datentypen und Beispielabfragen direkt aus dem aktuellen Schema.
+- CSV-Export korrigiert: Das 500-Treffer-Limit gilt nur noch für die Anzeige in der Oberfläche. CSV-Exporte enthalten wieder den vollständigen Trefferbestand der aktuellen Suche.
+- Renamer-Fuzzy-Suche flexibilisiert: Die automatische Trefferauswahl arbeitet mit mehreren konfigurierbaren Stufen. Standardmäßig werden nacheinander 60 Prozent, 45 Prozent und 30 Prozent Mindestübereinstimmung verwendet.
+- Renamer-Regeln erweitert: Die neuen Fuzzy-Fallback-Grenzen werden dauerhaft im Regelsystem gespeichert und bei älteren Regeldateien automatisch ergänzt.
+- Renamer um manuelle Suche erweitert: Einträge können unabhängig von der automatischen Erkennung gezielt als Film oder Serie gesucht werden. Der Suchbegriff kann manuell angepasst werden, und alle gefundenen Provider-Kandidaten sind sichtbar.
+- Provider im Renamer sichtbar: Gefundene Treffer zeigen direkt, ob sie von TMDB oder TheTVDB stammen. Schwächere Fallback-Treffer werden entsprechend gekennzeichnet und nicht wie sichere automatische Treffer behandelt.
+- Regel- und Profil-Simulator verbessert: Zusätzlich zum geplanten Codec-, Audio-, Untertitel- und Zielpfadverhalten wird die berechnete Endauflösung angezeigt. Wenn Auto-Crop erst während der Verarbeitung bestimmt werden kann, wird das kenntlich gemacht.
+- Untertitel-Sidecars erweitert: Neben den bisherigen Sidecar-Regeln können textbasierte Untertitel zusätzlich als SRT ausgegeben werden. Die Planung gilt einheitlich für Encode-, Remux-, DV-, HDR10+- und AV1-Pfade.
+- Timestamp-Reparatur weiter gehärtet: Reparaturkandidaten werden konsequent fail-closed geprüft. Laufzeit, Streamanzahl und Lesbarkeit werden nach Reparaturversuchen erneut kontrolliert; fehlerhafte Kandidaten ersetzen die Quelldatei nicht.
+- Release- und Dokumentationsprüfung verbessert: Help, README, technisches Handbuch, PDF-Handbuch, Changelog und `Hilfe -> Über` wurden auf den aktuellen Funktionsstand gebracht. Die Release-Prüfung erkennt außerdem veraltete Dokumente im fertigen Build.
 
 ## Installation
 
@@ -29,9 +26,9 @@
 2. Die SHA-256-Prüfsumme kontrollieren.
 3. Das ZIP in einen neuen Ordner entpacken.
 4. `DragonToolsV9.8.2.exe` starten.
-5. Benötigte externe Programme anhand von `TOOLS_INSTALLIEREN.txt` einrichten.
+5. Benötigte externe Medienprogramme anhand von `TOOLS_INSTALLIEREN.txt` einrichten.
 
-Das Windows-Paket enthält DragonTools samt Python-Laufzeit, aber keine externen Medienprogramme. Diese müssen von den jeweiligen offiziellen Projektseiten bezogen werden.
+Das Windows-Paket enthält DragonTools samt Python-Laufzeit, aber keine externen Medienprogramme. FFmpeg/FFprobe, MKVToolNix, GPAC/MP4Box, dovi_tool, hdr10plus_tool und MediaInfo müssen aus den jeweiligen offiziellen Quellen bezogen und in DragonTools hinterlegt werden.
 
 ## Updatehinweise
 
