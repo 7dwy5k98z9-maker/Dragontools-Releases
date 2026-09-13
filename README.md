@@ -6,7 +6,9 @@ Fertige Windows-Pakete werden nicht als normale Git-Dateien gespeichert, sondern
 
 Das vorbereitete aktuelle Release ist **DragonTools 9.8.2**. Es wird mit dem Tag `v9.8.2`, einem vollständigen Windows-ZIP und der zugehörigen SHA-256-Prüfsumme veröffentlicht.
 
-Der aktuelle 9.8.2-Patch enthält neben der Dolby-Vision-Crop-Korrektur einen gehärteten Timestamp-Reparaturpfad mit FFmpeg `+genpts/+igndts` und Archivablage verworfener Reparaturkandidaten sowie das erweiterte Schema 6 der DragonTools-Mediathek. Der Jellyfin-Import übernimmt jetzt deutlich mehr Metadaten, externe Untertitel, NFO-/Trickplay-Status, Provider-IDs, Genres, Studios, Collections und schlanke Personenbeziehungen. Weil die Versionsnummer unverändert bleibt, muss ein bereits veröffentlichtes 9.8.2-Paket samt Prüfsumme durch einen frisch geprüften Build ersetzt beziehungsweise das Release neu erstellt werden. Eine installierte V9.8.2 erkennt einen anderen Build mit derselben Versionsnummer nicht als neueres Update.
+Der aktuelle 9.8.2-Quellstand enthält neben der Dolby-Vision-Crop-Korrektur einen gehärteten Timestamp-Reparaturpfad mit FFmpeg `+genpts/+igndts` und Archivablage verworfener Reparaturkandidaten, das erweiterte Schema 6 der DragonTools-Mediathek und den kumulativen Technical Review Patch v4. Die Anwendung ist dabei weiter in fokussierte GUI-, Core- und Worker-Services zerlegt worden. Die realen DV-/HDR10+-Roundtrips erkennen lokal bereitgestellte Werkzeuge jetzt über die bekannten DragonTools-Toolordner und laufen regulär in der vollständigen Testsuite mit. Der synchronisierte Stand wurde mit **1.272 bestandenen Tests ohne Skips** geprüft.
+
+Bei dieser Quell- und Repository-Synchronisierung wurde kein neues Windows-Paket erzeugt. Vorhandene ZIP- und SHA-256-Dateien bleiben deshalb unverändert. Weil die Versionsnummer unverändert bleibt, muss ein später neu gebautes 9.8.2-Paket samt Prüfsumme gemeinsam ersetzt beziehungsweise das Release neu erstellt werden. Eine installierte V9.8.2 erkennt einen anderen Build mit derselben Versionsnummer nicht als neueres Update.
 
 ## Für Anwender
 
