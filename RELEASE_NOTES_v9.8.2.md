@@ -17,7 +17,7 @@
 - Provider im Renamer sichtbar: Gefundene Treffer zeigen direkt, ob sie von TMDB oder TheTVDB stammen. Schwächere Fallback-Treffer werden entsprechend gekennzeichnet und nicht wie sichere automatische Treffer behandelt.
 - Regel- und Profil-Simulator verbessert: Zusätzlich zum geplanten Codec-, Audio-, Untertitel- und Zielpfadverhalten wird die berechnete Endauflösung angezeigt. Wenn Auto-Crop erst während der Verarbeitung bestimmt werden kann, wird das kenntlich gemacht.
 - Untertitel-Sidecars erweitert: Neben den bisherigen Sidecar-Regeln können textbasierte Untertitel zusätzlich als SRT ausgegeben werden. Die Planung gilt einheitlich für Encode-, Remux-, DV-, HDR10+- und AV1-Pfade.
-- Timestamp-Reparatur weiter gehärtet: Reparaturkandidaten werden konsequent fail-closed geprüft. Laufzeit, Streamanzahl und Lesbarkeit werden nach Reparaturversuchen erneut kontrolliert; fehlerhafte Kandidaten ersetzen die Quelldatei nicht.
+- Timestamp-Reparatur weiter gehärtet: Reparaturkandidaten werden konsequent fail-closed geprüft. Der FFmpeg-Fallback nutzt jetzt `+genpts/+igndts`, damit Dateien mit defekten DTS/PTS-Zeitstempeln näher am bewährten Batch-Fallback repariert werden. Verworfene Kandidaten können zur Fehleranalyse im Archiv `Timestamp_Reparatur` abgelegt werden; sie ersetzen die Quelldatei nicht.
 - Release- und Dokumentationsprüfung verbessert: Help, README, technisches Handbuch, PDF-Handbuch, Changelog und `Hilfe -> Über` wurden auf den aktuellen Funktionsstand gebracht. Die Release-Prüfung erkennt außerdem veraltete Dokumente im fertigen Build.
 
 ## Installation
