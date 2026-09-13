@@ -8,7 +8,7 @@ Das vorbereitete aktuelle Release ist **DragonTools 9.8.2**. Es wird mit dem Tag
 
 Der aktuelle 9.8.2-Quellstand enthält neben der Dolby-Vision-Crop-Korrektur einen gehärteten Timestamp-Reparaturpfad mit FFmpeg `+genpts/+igndts` und Archivablage verworfener Reparaturkandidaten, das erweiterte Schema 6 der DragonTools-Mediathek und den kumulativen Technical Review Patch v4. Die Anwendung ist dabei weiter in fokussierte GUI-, Core- und Worker-Services zerlegt worden. Die realen DV-/HDR10+-Roundtrips erkennen lokal bereitgestellte Werkzeuge jetzt über die bekannten DragonTools-Toolordner und laufen regulär in der vollständigen Testsuite mit. Der synchronisierte Stand wurde mit **1.272 bestandenen Tests ohne Skips** geprüft.
 
-Bei dieser Quell- und Repository-Synchronisierung wurde kein neues Windows-Paket erzeugt. Vorhandene ZIP- und SHA-256-Dateien bleiben deshalb unverändert. Weil die Versionsnummer unverändert bleibt, muss ein später neu gebautes 9.8.2-Paket samt Prüfsumme gemeinsam ersetzt beziehungsweise das Release neu erstellt werden. Eine installierte V9.8.2 erkennt einen anderen Build mit derselben Versionsnummer nicht als neueres Update.
+Nach der Quell- und Repository-Synchronisierung wurde aus dem geprüften Public-Stand ein neues Windows-Paket erzeugt und lokal unter `artifacts` zusammen mit seiner SHA-256-Datei abgelegt. ZIP und Prüfsumme werden gemäß `.gitignore` nicht als normale Git-Dateien versioniert. Weil die Versionsnummer unverändert bleibt, muss das veröffentlichte 9.8.2-Paket samt Prüfsumme gemeinsam ersetzt beziehungsweise das Release neu erstellt werden. Eine installierte V9.8.2 erkennt einen anderen Build mit derselben Versionsnummer nicht als neueres Update.
 
 ## Für Anwender
 

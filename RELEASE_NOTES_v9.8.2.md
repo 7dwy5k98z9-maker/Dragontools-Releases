@@ -48,7 +48,7 @@ DragonTools V9.8.2 ist ein Wartungs- und Datenbankupdate mit Fokus auf Dolby Vis
 - Release-Validierung, Timestamp-Kandidaten, Strip-Only, Audio-/Video-Time-Mapping, Qualitätsprüfung, Streamargumente, finaler DV-Mux, Conversion-Fortschritt und ISO-Eingabeverarbeitung besitzen getrennte Verantwortlichkeiten.
 - Die realen Dolby-Vision- und HDR10+-Integrationstests erkennen die in den bekannten DragonTools-Toolordnern vorhandenen Programme automatisch und laufen regulär in der vollständigen Testsuite.
 - Der private Quellstand und die anonymisierte Public-Fassung wurden jeweils vollständig mit **1.272 bestandenen Tests ohne Skips** geprüft.
-- In dieser Repository-Synchronisierung wurde kein neues Windows-ZIP erzeugt; vorhandene lokale ZIP-/SHA256-Artefakte bleiben unverändert.
+- Aus dem geprüften Public-Stand wurde `DragonToolsV9.8.2-win64.zip` neu erzeugt und zusammen mit der passenden SHA-256-Datei lokal unter `artifacts` abgelegt. Das ZIP umfasst 696.652.903 Bytes; SHA-256: `5445b13cb1f8343fa17acb4dd52373ba4230915869118b47734314f317a30d89`.
 
 ## Dokumentation und Release-Prüfung
 
