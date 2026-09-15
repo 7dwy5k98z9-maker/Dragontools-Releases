@@ -4,7 +4,7 @@
 
 ## Aktuell vorbereitet: DragonTools 9.8.3
 
-Das Windows-Paket wurde am 15.09.2026 aus dem anonymisierten Public-Repository gebaut. Die vollständige Testsuite bestand mit **1.390 bestandenen Tests ohne Fehler oder Skips**, einschließlich zweier realer DV/HDR-Roundtrips. Details stehen in `RELEASE_NOTES_v9.8.3.md`.
+Das Windows-Paket wurde am 15.09.2026 gebaut. Die vollständige Testsuite bestand mit **1.390 bestandenen Tests ohne Fehler oder Skips**, einschließlich zweier realer DV/HDR-Roundtrips. Details stehen in `RELEASE_NOTES_v9.8.3.md`.
 
 - Paket: `artifacts/DragonToolsV9.8.3-win64.zip`
 - Prüfsumme: `artifacts/DragonToolsV9.8.3-win64.zip.sha256`
