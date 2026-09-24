@@ -6,11 +6,11 @@
 4. Windows-Anwendung frisch bauen und auf einem sauberen System testen.
 5. Vollständigen Anwendungsordner als ZIP verpacken.
 6. SHA-256-Prüfsumme aus genau diesem ZIP neu erzeugen.
-7. GitHub Release mit dem Tag `v9.8.4` und dem Titel `DragonTools 9.8.4` anlegen.
+7. GitHub Release mit dem Tag `v9.8.6` und dem Titel `DragonTools 9.8.6` anlegen.
 8. Release-Hinweise, ZIP und Prüfsumme anhängen.
 9. Release zunächst als Entwurf prüfen.
 10. Erst danach als stabiles Release veröffentlichen.
 
-Die in DragonTools eingebaute Updateprüfung findet nur eine Version, die höher als die installierte Version ist. Das veröffentlichte Release `v9.8.4` wird deshalb von älteren Versionen einschließlich V9.8.3 gefunden; in V9.8.4 selbst gilt es anschließend als aktuell.
+Die in DragonTools eingebaute Updateprüfung findet nur eine Version, die höher als die installierte Version ist. Das veröffentlichte Release `v9.8.6` wird deshalb von älteren Versionen einschließlich V9.8.5 gefunden; in V9.8.6 selbst gilt es anschließend als aktuell.
 
-Wird das Paket innerhalb von 9.8.4 ausgetauscht, müssen Release-Hinweise, ZIP und SHA-256-Datei gemeinsam aktualisiert werden. Bereits installierte 9.8.4-Versionen erhalten dafür keinen automatischen Hinweis; dafür wäre eine höhere Versionsnummer erforderlich.
+Wird das Paket innerhalb von 9.8.6 ausgetauscht, müssen Release-Hinweise, ZIP und SHA-256-Datei gemeinsam aktualisiert werden. Bereits installierte 9.8.6-Versionen erhalten dafür keinen automatischen Hinweis; dafür wäre eine höhere Versionsnummer erforderlich.
