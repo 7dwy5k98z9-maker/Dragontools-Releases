@@ -8,8 +8,8 @@ Das Windows-Paket wurde am 25.09.2026 aus dem anonymisierten Public-Stand gebaut
 
 - Paket: `artifacts/DragonToolsV9.8.6-win64.zip`
 - Prüfsumme: `artifacts/DragonToolsV9.8.6-win64.zip.sha256`
-- Größe: 778371816 Bytes
-- SHA-256: `9ef85480dea823439225ce1230a558a54e05f2ae27569fa2713e4bfa4a1170ee`
+- Größe: 777514206 Bytes
+- SHA-256: `1e91d2459309b2faee6b32b11bb1973d7c16b7f79f4836fca4dfde0e8bb07350`
 
 ZIP-Integrität und SHA-256 wurden nach der Erstellung erneut geprüft. Das ZIP enthält die EXE und den vollständigen erforderlichen Datenordner. Externe Medienwerkzeuge werden entsprechend der bisherigen Public-Paketierung separat eingerichtet; `TOOLS_INSTALLIEREN.txt` liegt bei.
 
@@ -28,3 +28,7 @@ Abbruch ist kooperativ. Der Windows-Neustartschutz ist keine garantierte Sperre 
 ## Lizenz
 
 Für DragonTools wurde noch keine Open-Source-Lizenz erteilt. Die Veröffentlichung von Download oder Quelltext allein gewährt keine darüber hinausgehenden Nutzungsrechte.
+
+## Aktualisierter Stand vom 25.09.2026
+
+Der erneute Abgleich enthält die Patches BA, BB und BC: getrennte Original-Timingreferenzen, manuelle Episodenwahl und Datei-Einstellungen für Mehrfachauswahl. Alle 12 gezielten Regressionstests bestehen. Das anonymisierte Windows-Paket wurde neu gebaut und ZIP sowie SHA-256 erneut geprüft. Die Versionsnummer bleibt 9.8.6.
