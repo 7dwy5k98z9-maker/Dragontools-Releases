@@ -1,16 +1,14 @@
-# Release-Checkliste
+# Release-Checkliste 9.8.7
 
-1. Versionsnummer in DragonTools erhöhen.
-2. Timestamp-/Datenbanktests, gesamte Testsuite und Release-Validierung erfolgreich abschließen.
-3. Öffentlichen Quellstand auf private Daten prüfen.
-4. Windows-Anwendung frisch bauen und auf einem sauberen System testen.
-5. Vollständigen Anwendungsordner als ZIP verpacken.
-6. SHA-256-Prüfsumme aus genau diesem ZIP neu erzeugen.
-7. GitHub Release mit dem Tag `v9.8.6` und dem Titel `DragonTools 9.8.6` anlegen.
-8. Release-Hinweise, ZIP und Prüfsumme anhängen.
-9. Release zunächst als Entwurf prüfen.
-10. Erst danach als stabiles Release veröffentlichen.
+Der aktuelle Auftrag erzeugt ausschließlich lokale Artefakte. Kein GitHub Release wird angelegt oder veröffentlicht.
 
-Die in DragonTools eingebaute Updateprüfung findet nur eine Version, die höher als die installierte Version ist. Das veröffentlichte Release `v9.8.6` wird deshalb von älteren Versionen einschließlich V9.8.5 gefunden; in V9.8.6 selbst gilt es anschließend als aktuell.
+1. Anonymisierten Quellstand 9.8.7 mit Datenschutzprüfung kontrollieren.
+2. Gezielte Release-Tests, Paketvalidierung und Frozen-Runtime-Smoke ausführen.
+3. Bekannte Abweichungen der vollständigen Testsuite in den Release-Hinweisen dokumentieren.
+4. Windows-Anwendung frisch ohne externe Medienwerkzeuge bauen.
+5. Vollständigen Anwendungsordner als `artifacts/DragonToolsV9.8.7-win64.zip` verpacken.
+6. ZIP-Inhalt, CRC-Integrität und private Marker einschließlich kompilierter Module prüfen.
+7. SHA-256 aus exakt diesem ZIP erzeugen und als gleichnamige `.sha256`-Datei ablegen.
+8. Release-Hinweise und Repository-Dokumentation committen und pushen. ZIP und SHA bleiben entsprechend `.gitignore` lokal.
 
-Wird das Paket innerhalb von 9.8.6 ausgetauscht, müssen Release-Hinweise, ZIP und SHA-256-Datei gemeinsam aktualisiert werden. Bereits installierte 9.8.6-Versionen erhalten dafür keinen automatischen Hinweis; dafür wäre eine höhere Versionsnummer erforderlich.
+Für eine spätere Veröffentlichung müssen die vorhandenen Testabweichungen bewertet und ZIP sowie Prüfsumme gemeinsam an ein GitHub Release angehängt werden. Ein Git-Push allein veröffentlicht kein Release und löst keinen Updatehinweis aus.
