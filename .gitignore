@@ -9,3 +9,6 @@
 # Prüfsummendateien dürfen vor dem Upload lokal erzeugt werden,
 # gehören aber zusammen mit dem ZIP in das GitHub Release.
 *.sha256
+
+# Lokale Windows-Bundles und zugehörige Prüfsummen
+/artifacts/
