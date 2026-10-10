@@ -1,9 +1,23 @@
-# Release-Checkliste 9.9.0 – 08.10.2026
+# Veröffentlichung von DragonTools 9.9.0
 
-1. Den anonymisierten öffentlichen Quellstand abgleichen und Datenschutzprüfung ausführen.
-2. Vollständige Standardtestsuite und Syntax-/Namensprüfung ausführen.
-3. Windows-Anwendung aus dem öffentlichen Quellstand ohne externe Medienwerkzeuge bauen.
-4. App-Bundle, kompilierte Anwendungsmodule und tatsächlichen EXE-Start prüfen.
-5. EXE mit vollständigem `Daten`-Ordner unter `artifacts` ablegen und ihre SHA-256-Datei erzeugen.
-6. Den vollständigen Anwendungsordner als `artifacts/DragonToolsV9.9.0-win64.zip` verpacken, ZIP-Inventar und CRC prüfen und die zugehörige SHA-256-Datei erzeugen.
-7. Release-Dokumentation committen und pushen. Das bestehende GitHub Release `v9.9.0` mit ZIP und Prüfsumme aktualisieren; die zusätzlichen lokalen Dateien bleiben unter `artifacts` erhalten.
+## Quellstand
+
+### Abgleich und Prüfungen
+
+Privaten und öffentlichen Quellstand abgleichen. Hilfe und Changelog aktuell halten. Datenschutzprüfung, Standardtests und Release-Validierung ausführen.
+
+## Windows-Paket
+
+### Build und Laufzeit
+
+Die EXE aus dem öffentlichen Quellstand ohne externe Medienwerkzeuge bauen. App-Bundle, kompilierte Anwendungsmodule und den Start der tatsächlichen EXE prüfen.
+
+### Artefakte
+
+Die EXE mit vollständigem Daten-Ordner unter artifacts ablegen. Den Anwendungsordner als ZIP verpacken, dessen Inhalt und CRC prüfen sowie SHA-256-Dateien für EXE und ZIP erstellen.
+
+## Veröffentlichung
+
+### Repositories und GitHub-Release
+
+Quellstand und Release-Dokumentation committen und pushen. Das bestehende GitHub-Release v9.9.0 mit dem geprüften ZIP und seiner Prüfsumme aktualisieren. Die zusätzlichen lokalen Dateien bleiben unter artifacts erhalten.
