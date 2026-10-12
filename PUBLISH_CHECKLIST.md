@@ -1,4 +1,4 @@
-# Veröffentlichung von DragonTools 9.9.0
+# Veröffentlichung von DragonTools 9.9.1
 
 ## Quellstand
 
@@ -20,4 +20,4 @@ Die EXE mit vollständigem Daten-Ordner unter artifacts ablegen. Den Anwendungso
 
 ### Repositories und GitHub-Release
 
-Quellstand und Release-Dokumentation committen und pushen. Das bestehende GitHub-Release v9.9.0 mit dem geprüften ZIP und seiner Prüfsumme aktualisieren. Die zusätzlichen lokalen Dateien bleiben unter artifacts erhalten.
+Quellstand und Release-Dokumentation committen und pushen. Das GitHub-Release v9.9.1 mit dem geprüften ZIP und den zugehörigen Prüfsummen veröffentlichen. Die zusätzlichen lokalen Dateien bleiben unter artifacts erhalten.
