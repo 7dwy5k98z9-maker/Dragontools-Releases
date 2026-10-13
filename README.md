@@ -10,7 +10,7 @@ Der aktuelle Stand korrigiert die Laufzeit beim Einbrennen von PGS-Untertiteln u
 
 ### Dokumentation und Prüfungen
 
-Hilfe, Handbuch und Changelog sind auf Version 9.9.1 abgestimmt. Die Standardtestsuite bestand mit 5401 erfolgreichen Fällen, 13 übersprungenen Fällen und 24 nicht ausgewählten DV/HDR-Integrationstests. Die Veröffentlichung umfasst die statische Codeprüfung, die öffentliche Datenschutzprüfung, die Quellvalidierung und den Starttest der tatsächlichen EXE. Die 18 App-Prüfpunkte ergeben keine Fehler; externe Medienwerkzeuge werden separat installiert.
+Hilfe, Handbuch und Changelog sind auf Version 9.9.1 abgestimmt. Das eigenständige Anwender-, Referenz- und Entwicklerhandbuch wird aus der Word-Quelle gepflegt und behält seine 35 Hauptkapitel auf 408 Seiten. Die Standardtestsuite bestand mit 5401 erfolgreichen Fällen, 13 übersprungenen Fällen und 24 nicht ausgewählten DV/HDR-Integrationstests. Die Veröffentlichung umfasst die statische Codeprüfung, die öffentliche Datenschutzprüfung, die Quellvalidierung und den Starttest der tatsächlichen EXE. Die 18 App-Prüfpunkte ergeben keine Fehler; externe Medienwerkzeuge werden separat installiert.
 
 ## Windows-Paket
 
@@ -20,8 +20,8 @@ Hilfe, Handbuch und Changelog sind auf Version 9.9.1 abgestimmt. Die Standardtes
 - Paket-Prüfsumme: `artifacts/DragonToolsV9.9.1-win64.zip.sha256`
 - Anwendung: `artifacts/DragonToolsV9.9.1/DragonToolsV9.9.1.exe` mit zugehörigem `Daten/`
 - EXE-Prüfsumme: `artifacts/DragonToolsV9.9.1/DragonToolsV9.9.1.exe.sha256`, zusätzlich im Wurzelordner `artifacts/`
-- Paketgröße: 198111342 Bytes, 409 Dateien
-- ZIP-SHA-256: `81fdec9a557fedb28d7b8e4dc41b2cbedd75891ba481da6d16cf313c297c13da`
+- Paketgröße: 205927448 Bytes, 409 Dateien
+- ZIP-SHA-256: `348725aa46b838f7a3aca8aa915424d962caa07bb2a8afbf852aab167459b07a`
 - EXE-SHA-256: `cc746f9019716a0e171eb27a39cee0cee55257b5bc8d0a2771b0d37d63574879`
 
 ### Installation und Download

@@ -50,7 +50,7 @@ Die Journal-Wiederherstellung läuft beim Start im Hintergrund. Aus der Liste en
 
 ### Hilfe und Changelog
 
-Hilfe, Handbuch und Versionsangaben sind auf 9.9.1 abgestimmt. Das Changelog beschreibt die technische Entwicklung nach Fachbereichen und Unterpunkten. JSON- und Textfassung enthalten dieselben Informationen.
+Hilfe, Handbuch und Versionsangaben sind auf 9.9.1 abgestimmt. Das Changelog beschreibt die technische Entwicklung nach Fachbereichen und Unterpunkten. JSON- und Textfassung enthalten dieselben Informationen. Das eigenständig aufgebaute Anwender-, Referenz- und Entwicklerhandbuch behält seine 35 Hauptkapitel und 408 Seiten. Die aktuellen Funktionen sind in die passenden Kapitel eingearbeitet; das Inhaltsverzeichnis und die Seitenverweise sind geprüft.
 
 ### Installation
 
