@@ -2,37 +2,29 @@
 
 Öffentliche Veröffentlichungsinformationen unter dem Entwicklernamen **Dragon Developer**.
 
-## DragonTools 9.9.1 – 13.10.2026
+## DragonTools 9.9.2 – 23.10.2026
 
-### Medienverarbeitung und Dateiverwaltung
-
-Der aktuelle Stand korrigiert die Laufzeit beim Einbrennen von PGS-Untertiteln und setzt passende Untertitel bei anderssprachigem Audio automatisch als Standard. Der MP4-Remux verwendet die vorhandene Analyse; die Videoliste zeigt die geplante Pipeline. Video- und Audiodauer werden getrennt geprüft, erfolgreiche Reparaturen hinterlassen keine unveränderten Zwischenkopien desselben Auftrags. Bestätigte Renamer-Zuordnungen werden im Preflight wiederverwendet; der Verschiebeablauf vermeidet zusätzliche vollständige Dateizugriffe. Staffel- und Serienprüfung sowie Journal-Wiederherstellung sind enthalten. Einzelheiten stehen in [RELEASE_NOTES_v9.9.1.md](RELEASE_NOTES_v9.9.1.md).
-
-### Dokumentation und Prüfungen
-
-Hilfe, Handbuch und Changelog sind auf Version 9.9.1 abgestimmt. Das eigenständige Anwender-, Referenz- und Entwicklerhandbuch wird aus der Word-Quelle gepflegt und behält seine 35 Hauptkapitel auf 408 Seiten. Die Standardtestsuite bestand mit 5401 erfolgreichen Fällen, 13 übersprungenen Fällen und 24 nicht ausgewählten DV/HDR-Integrationstests. Die Veröffentlichung umfasst die statische Codeprüfung, die öffentliche Datenschutzprüfung, die Quellvalidierung und den Starttest der tatsächlichen EXE. Die 18 App-Prüfpunkte ergeben keine Fehler; externe Medienwerkzeuge werden separat installiert.
+Version 9.9.2 enthält konfigurierbare Standarduntertitel, verbesserte Audio-Spracherkennung und Serienzuordnung, Mediathekimport mit Fortschrittsanzeige sowie Korrekturen an Verschieben, Warteschlange, Laufzeitprüfung und Windows-Neustartschutz. Einzelheiten stehen in [RELEASE_NOTES_v9.9.2.md](RELEASE_NOTES_v9.9.2.md).
 
 ## Windows-Paket
 
-### Lokale Artefakte
+- Vollständiges Paket: `artifacts/DragonToolsV9.9.2-win64.zip`
+- Paket-Prüfsumme: `artifacts/DragonToolsV9.9.2-win64.zip.sha256`
+- Anwendung: `artifacts/DragonToolsV9.9.2/DragonToolsV9.9.2.exe` mit zugehörigem `Daten/`
+- EXE-Prüfsumme: `artifacts/DragonToolsV9.9.2/DragonToolsV9.9.2.exe.sha256`, zusätzlich unter `artifacts/`
+- Paketgröße: 214315722 Bytes, 455 Dateien
+- ZIP-SHA-256: `259bc868c940751713603071cf6e3de51f83b27da523351989b2e6e52a5b7766`
+- EXE-SHA-256: `55f658cc341d2e5f80e5d8f1e9c9ec069044a6f717a2fa069b1c53b612447ea1`
 
-- Vollständiges Paket: `artifacts/DragonToolsV9.9.1-win64.zip`
-- Paket-Prüfsumme: `artifacts/DragonToolsV9.9.1-win64.zip.sha256`
-- Anwendung: `artifacts/DragonToolsV9.9.1/DragonToolsV9.9.1.exe` mit zugehörigem `Daten/`
-- EXE-Prüfsumme: `artifacts/DragonToolsV9.9.1/DragonToolsV9.9.1.exe.sha256`, zusätzlich im Wurzelordner `artifacts/`
-- Paketgröße: 205927448 Bytes, 409 Dateien
-- ZIP-SHA-256: `348725aa46b838f7a3aca8aa915424d962caa07bb2a8afbf852aab167459b07a`
-- EXE-SHA-256: `cc746f9019716a0e171eb27a39cee0cee55257b5bc8d0a2771b0d37d63574879`
+Das vollständige ZIP entpacken und die EXE zusammen mit dem Ordner `Daten` belassen. Das Paket enthält die benötigten Python-/Qt-Laufzeitdateien und das öffentliche Handbuch mit 408 Seiten. Externe Medienwerkzeuge werden separat anhand von `TOOLS_INSTALLIEREN.txt` eingerichtet.
 
-### Installation und Download
+ZIP und Prüfsummen stehen im [GitHub-Release v9.9.2](https://github.com/7dwy5k98z9-maker/Dragontools-Releases/releases/tag/v9.9.2). Entsprechend `.gitignore` bleiben die großen Binärdateien lokal unter `artifacts`; dieses Repository verwaltet die Release-Dokumentation. Ältere Veröffentlichungen bleiben verfügbar.
 
-Das vollständige ZIP entpacken und die EXE zusammen mit dem Ordner `Daten` belassen. Das Paket enthält die benötigten Python-/Qt-Laufzeitdateien und das öffentliche Handbuch. Externe Medienwerkzeuge werden anhand von `TOOLS_INSTALLIEREN.txt` separat eingerichtet.
+## Prüfungen und Quellcode
 
-ZIP und Prüfsummen stehen im [GitHub-Release v9.9.1](https://github.com/7dwy5k98z9-maker/Dragontools-Releases/releases/tag/v9.9.1). Entsprechend `.gitignore` bleiben die großen Binärdateien lokal unter `artifacts`; dieses Repository verwaltet die Release-Dokumentation. Ältere Veröffentlichungen bleiben verfügbar.
+Die vollständige öffentliche Standardtestsuite bestand: `5658 passed, 20 skipped, 24 deselected in 466.06s (0:07:46)`. Die zwei nativen Windows-Neustartschutztests bestanden zusätzlich. Datenschutzprüfung, statische Prüfung, Quellvalidierung, App-Validierung und EXE-Starttest bestanden. Alle 930 enthaltenen Anwendungsmodule wurden gegen den aktuellen Quellstand geprüft. ZIP-Inhalt, CRC und SHA-256 sind verifiziert.
 
-### Quellcode
-
-Die Anwendungsversion ist 9.9.1. Der öffentliche Quellcode steht in [Dragontools-Public](https://github.com/7dwy5k98z9-maker/Dragontools-Public).
+Der öffentliche Quellcode steht in [Dragontools-Public](https://github.com/7dwy5k98z9-maker/Dragontools-Public).
 
 ## Lizenz
 
